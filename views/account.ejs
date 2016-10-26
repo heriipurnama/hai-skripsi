@@ -1,0 +1,105 @@
+<% layout('layout') -%>
+
+<div class="page-header">
+	<h2 align="center"><b>STMIK AKAKOM YOGYAKARTA</b></h2>
+</div>  
+<div class="container">
+	<h1>Selamat Datang <%-user.nick%> </h1>
+		<div class="row">
+			<div class="col-sm-3 col-md-6 col-lg-8"
+				style="background-color: #ffff;
+				box-shadow: inset 0px -0px 0px #444,
+				inset -1px 1px 1px #444;">
+					<p>Selamat Datang di Aplikasi Pencarian Skripsi. Aplikasi Pencarian Skripsi adalah aplikasi yang memungkinkan para civitas akademika STMIK AKAKOM untuk menerima informasi dengan lebih cepat melalui Internet. Sistem ini diharapkan dapat memberi kemudahan setiap civitas akademika untuk melakukan aktivitas-aktivitas akademik dan proses belajar mengajar. Selamat menggunakan fasilitas ini.
+					</p>
+			</div>
+			<div class="col-sm-9 col-md-6 col-lg-4"
+				style="background-color: #dedef8;
+				box-shadow: inset 1px -1px 1px #444,
+				inset -1px 1px 1px #444;">
+					<h2 align='center'>Account</h2><hr/>
+						<p align ="center">	
+							<img src="/images/images.png" alt="Mountain View" style="width:80px;height:80px"></a><br/>
+							Nickname: <%-user.nick%><br />
+							username: <%-user.name%><br />
+							Tadam...!!!!<br/>
+							<a href="/auth/logout">logout</a>
+					</p>
+			</div>
+		</div>
+</div> 
+
+<form id="data"  method="post" action="/data" role="form" >
+<div class="form-group">
+	<h2>Masukkan Data <img src="/images/tampah.png" alt="Mountain View" style="width:45px;height:45px"> </h2>
+	<p>
+		<label for="nama">Judul Skripsi: </label><br />
+		<h4><font color="red"><%= message %></font></h4>
+			<input type="text" class="form-control" name="jdlSkripsis" placeholder="judul skripsi" autofocus required />
+	</p>
+	<div class="account">
+		<a href="/tampil" title="lihat data"><img src="/images/data.png" alt="View" style="width:80px;height:80px"></a>
+	</div>
+
+
+	<p>
+		<label for="Tahun">Tahun Skripsi : </label><br />
+			<select name="thnSkripsis" id="s" class="form-control" >
+
+			</select>
+	</p>
+	<p>
+		<label for="nama">Nama Mahasiswa : </label><br />
+			<input type="text" class="form-control" name="namaMhs" placeholder="nama mahasiswa" required />
+	</p>
+	<p>
+		<label for="nim">Nim : </label><br />
+			<input type="text" class="form-control" name="nimMhs" id="idnim" placeholder="nim" required />
+	</p>
+	<p>
+		<label for="jurusan">Jurusan : </label><br />
+			<select name="jurMhs" class="form-control">
+				<option value="0" selected>-- Pilih Jurusan --</option>
+				<option value="Teknik Informatika">Teknik Informatika</option>
+				<option value="Sistem Informasi">Sistem Informasi</option>
+				<option value="Manajemen Informatika">Manajemen Informatika</option>
+				<option value="Komputerisasi Akuntansi">Komputerisasi Akuntansi</option>
+				<option value="Teknik Komputer">Teknik Komputer</option>
+			</select>
+	</p>
+	<p>
+		<label for="jenjang">Jenjang : </label><br />
+			<select name="jenjangMhs" class="form-control">
+				<option value="0" selected>-- Pilih Jenjang --</option>
+				<option value="Strata 1">Strata 1</option>
+				<option value="Diploma 3">Diploma 3</option>
+			</select>
+	</p>
+	<p>
+		<label for="name">Abstrak</label>
+		<textarea  class="wysiwyg" name="abstrak" rows="15" cols="143" placeholder="abstrak"></textarea>
+	</p>
+	<p>
+		<label for="keyword">keyword : </label><br />
+			<input type="text" class="form-control" name="keyword" id="keyword" placeholder="keyword" />
+	</p>
+	<p>
+		<input type="submit"  class="btn btn-raised btn-success" value="OK" onClick="cek()">
+		<button class="btn btn-raised btn-warning" type="reset">Delete</Button>
+
+	</p>
+	</div>
+</form>
+
+<div id="hover">
+	<p align="center"><a href="/tampil" title="Lihat Data"><img width="50px" src="/images/1a.png"></a>
+		<a href="/data-editor/" target=_blank title="Data Editor"><img width="53px" src="/images/1b.png"></a>
+	</p>
+
+</div>
+
+
+
+ <div class="panel-footer">
+       			copyright@STMIK AKAKOM Yogyakarta
+</div>

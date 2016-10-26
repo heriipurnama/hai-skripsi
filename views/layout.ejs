@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hai-skripsi</title>
+	<link rel="icon" type="text/css" href="/images/icon1.png">
+	<link rel="stylesheet" href="/stylesheet/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheet/master/jwysiwyg-master/jquery.wysiwyg.css" type="text/css"/>
+	<script src="/stylesheet/jquery/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="/stylesheet/master/jwysiwyg-master/jquery.wysiwyg.js">
+
+	</script>
+	<style type="text/css">
+		body { 
+			background-color:#EFEFEF;
+		}		
+		table#t01 {
+	    	background-color: #99CCFF;
+		}
+		#panel, #flip {
+    		padding: 5px;
+    		margin-right: 11pc;
+    		background-color: #e5eecc;
+    		border: solid 1px #c3c3c3;
+
+		}
+		#panel {
+    		padding: 50px;
+    		display: none;
+
+		}
+		.account a img {
+			opacity: 0.6;
+			filter: alpha(opacity=80);
+		}
+
+		.account a img:hover {
+			opacity: 1.0;
+			filter: alpha(opacity=100);
+		}
+
+		#hover a img {
+			opacity: 0.6;
+			filter: alpha(opacity=80);
+		}
+		#hover a img:hover {
+			opacity: 1.0;
+			filter: alpha(opacity=100);
+		
+		}
+	</style>
+	<script type="text/javascript">
+		function cek(){
+			var idnim=document.getElementById("idnim").value;
+				if (idnim=="") {
+					alert("nim mahasiswa tidak boleh kosong");
+				}
+				else if(!(idnim>=8))
+					alert("masukkan hanaya delapan angka saja");
+				else
+					alert("nim sudah benar."+idnim);
+		}
+
+			$(document).ready(function(){
+    			$("#flip").click(function(){
+        			$("#panel").slideToggle("slow");
+    			});
+			});
+
+			$(function() {
+    			$('.wysiwyg').wysiwyg();
+			});
+
+			$(function() {
+  				var start_year = new Date().getFullYear();
+				  for (var i = start_year; i > start_year - 6; i--) {
+    				$('#s').append('<option value="' + i + ' Genap'+'">' + i + ' Genap'+'</option>');
+					  $('#s').append('<option value="' + i + ' Gasal'+'">' + i + ' Gasal'+'</option>');
+  					}
+			});
+
+
+		</script>
+</head>
+	<body>
+		<%- body %>
+	</body>
+</html>

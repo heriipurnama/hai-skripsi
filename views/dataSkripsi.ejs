@@ -1,0 +1,111 @@
+<% layout('layout') -%>
+
+<div class="page-header">
+	<h2 align="center"><b>STMIK AKAKOM YOGYAKARTA</b></h2>
+</div>  
+<div class="container">
+	<h1>Selamat Datang <%-user.nick%> </h1>
+		<div class="row">
+			<div class="col-sm-3 col-md-6 col-lg-8"
+				style="background-color: #fff;
+				box-shadow: inset 0px -0px 0px #444,
+				inset -1px 1px 1px #444;">
+					<p>Selamat Datang di Aplikasi Pencarian Skripsi. Aplikasi Pencarian Skripsi adalah aplikasi yang memungkinkan para civitas akademika STMIK AKAKOM untuk menerima informasi dengan lebih cepat melalui Internet. Sistem ini diharapkan dapat memberi kemudahan setiap civitas akademika untuk melakukan aktivitas-aktivitas akademik dan proses belajar mengajar. Selamat menggunakan fasilitas ini.
+					</p>
+			</div>
+			<div class="col-sm-9 col-md-6 col-lg-4"
+				style="background-color: #dedef8;
+				box-shadow: inset 1px -1px 1px #444,
+				inset -1px 1px 1px #444;">
+					<h2 align='center'>Account</h2><hr/>
+						<p align ="center">	
+							<img src="/images/images.png" alt="Mountain View" style="width:80px;height:80px"></a><br/>
+							Nickname: <%-user.nick%><br />
+							username: <%-user.name%><br />
+							Tadam...!!!!<br/>
+							<a href="/auth/logout">logout</a>
+					</p>
+			</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<h3>Data </h3> 
+<b>Jumlah Skripsi:  <font color="red"> <%- jmlh %></font> Examplar.
+		Teknik Informatika : <font color="red"><%- jmlhti %></font> Exp. 
+		Sistem Informasi :  <font color="red"><%- jmlhsi %></font> Exp.
+		Manajemen Informatika :  <font color="red"><%- jmlhmi %></font> Exp.
+		Komputerisasi Akuntansi :  <font color="red"><%- jmlhka %></font> Exp.
+		Teknik Komputer :  <font color="red"><%- jmlhtk %></font> Exp.</b><br/>
+
+			<form id="data" role="form" method="post" action="/cariData">
+				<div class="form-groups">
+					<br/><p>
+						<label for="nama">Nama Mahasiswa: </label><br/>
+					</p>
+					<input name="q"  class="form-control" placeholder="Cari Nama Mahasiswa" autofocus/>
+					<p><br/>
+						<input type="submit" class="btn btn-primary" value="OK">
+						<button class="btn btn-raised btn-warning" type="reset">Delete</Button>
+					</p>
+				</div>
+			</form>
+<div id="flip">
+	<input type="" class="btn btn-primary" value="Export data dokumen excel">
+</div>
+			<div id="hover">
+				<p align="left"><a href="/akun" title="isi Data"><img width="50px" src="/images/1a.png">Isi Data</a></p>
+			</div>
+				<!-- Skrip javaScript ambil data "date" pada sistem  -->
+					<script language="javascript">
+						document.lastModified;
+							var a = document.lastModified;
+						$('#u').append('<input type="hidden" name="upload" value="' + a + '"/>');
+			</script>
+<div id="panel">
+<form id="dataku" role="form" enctype="multipart/form-data" method="post" action="/upload">
+  <div class="form-group">
+	<br/><p>
+		<label for="nama">Upload File xlsx</label><br/>
+	</p>
+		<input type="file" name="upload"  multiple="multiple"/>
+	<p><br/>
+		<input type="submit" class="btn btn-primary" value="upload">
+		<button class="btn btn-raised btn-warning" type="reset">Delete</Button>
+		<a href="/export"><button class="btn btn-raised btn-warning" >csc</Button></a>
+			<a href="/export">export</a>
+	</p>
+	</div>
+</form>
+</div>
+<table  class="table table-hover">
+		<tr>
+			<th>Judul Skripsi</th>
+			<th>Tahun Skripsi</th>
+			<th>Nama Mahasiswa</th>
+			<th>Nim Mahasiswa</th>
+			<th>Jurusan Mahasiswa</th>
+			<th>Jenjang Mahasiswa</th>
+			<th>Abstrak</th>
+			<th>Modifikasi</th>
+			<th>Aksi</th>
+		</tr>
+		<% skripses.forEach(function(dataku){ %>
+			<tr>
+				<td style="display:none;"><%= dataku._id %></td>
+				<td><%= dataku.jdlSkripsis %></td>
+				<td><%= dataku.thnSkripsis %></td>
+				<td><%= dataku.namaMhs %></td>
+				<td><%= dataku.nimMhs %></td>
+				<td><%= dataku.jurMhs %></td>
+				<td><%= dataku.jenjangMhs %></td>
+				<td><%= dataku.abstrak %></td>
+				<td><%= dataku.modified %></td>
+				<td><a href="/<%= dataku._id %>/update"> EDIT </a> | <a href="/<%= dataku._id %>/delete">HAPUS</a></td>
+			<tr>
+		<% })%>
+	</table>
+	</div>
+</div>
+<br>
+
+<div class="panel-footer">
+	copyright@STMIK AKAKOM Yogyakarta
+</div>

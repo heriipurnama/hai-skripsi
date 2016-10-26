@@ -1,0 +1,8 @@
+2016-08-25T11:33:01.703Z	cp07hu5hyl2m/1472124781651/616/-	INFO	hello	Seneca/0.6.2/cp07hu5hyl2m/1472124781651/616/-	
+Thu, 25 Aug 2016 11:33:04 GMT express-session deprecated undefined resave option; provide resave option at services/web-app.js:75:9
+Thu, 25 Aug 2016 11:33:04 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at services/web-app.js:75:9
+2016-08-25T11:33:04.734Z	cp07hu5hyl2m/1472124781651/616/-	INFO	client	{port=10201,pin={role=user,cmd=*}}	
+2016-08-25T11:33:04.748Z	cp07hu5hyl2m/1472124781651/616/-	INFO	client	{port=10202,pin={role=offer,cmd=*}}	
+2016-08-25T11:33:04.754Z	cp07hu5hyl2m/1472124781651/616/-	INFO	client	{port=10203}	
+Koneksi Sukses
+2016-08-25T11:33:05.180Z	cp07hu5hyl2m/1472124781651/616/-	WARN	plugin	data-editor		ACT		init:data-editor	DEPRECATED	cmd:push,note:true,role:util	role:util patterns are replaced by role:basic.	

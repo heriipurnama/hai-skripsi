@@ -1,0 +1,103 @@
+<% layout('layout') -%>
+
+<div class="page-header">
+	<h2 align="center"><b>STMIK AKAKOM YOGYAKARTA</b></h2>
+</div>
+<div class="container">
+	<h1>Selamat Datang <%-user.nick%> </h1>
+	<div class="row">
+		<div class="col-sm-3 col-md-6 col-lg-8"
+			 style="background-color: #fff;
+				box-shadow: inset 0px -0px 0px #444,
+				inset -1px 1px 1px #444;">
+			<p>Selamat Datang di Aplikasi Pencarian Skripsi. Aplikasi Pencarian Skripsi adalah apliksi yang memungkinkan para civitas akademika STMIK AKAKOM untuk menerima informasi dengan lebih cepat melalui Internet. Sistem ini diharapkan dapat memberi kemudahan setiap civitas akademika untuk melakukan aktivitas-aktivitas akademik dan proses belajar mengajar. Selamat menggunakan fasilitas ini.
+			</p>
+		</div>
+		<div class="col-sm-9 col-md-6 col-lg-4"
+			 style="background-color: #dedef8;
+				box-shadow: inset 1px -1px 1px #444,
+				inset -1px 1px 1px #444;">
+			<h2 align='center'>Account</h2><hr/>
+			<p align ="center">
+				<img src="/images/images.png" alt="Mountain View" style="width:80px;height:80px"></a><br/>
+				Nickname: <%-user.nick%><br />
+				username: <%-user.name%><br />
+				Tadam...!!!!<br/>
+				<a href="/auth/logout">logout</a>
+			</p>
+		</div>
+	</div>
+</div>
+<form id="data"  method="POST" action="/<%= skripses._id %>" role="form">
+	<div class="form-group">
+		<p>
+			<label for="nama">Judul Skripsi: </label><br />
+			<input type="text" class="form-control"  name="jdlSkripsis" value="<%= skripses.jdlSkripsis %>" autofocus/>
+		</p>
+		<p>
+			<label for="tahunDibuat">Tahun Skripsi : </label><br />
+			<input type="text" class="form-control"  name="thnSkripsis" value="<%= skripses.thnSkripsis %>" />
+		</p>
+		<p>
+			<label for="nama">Nama Mahasiswa : </label><br />
+			<input type="text" class="form-control"  name="namaMhs" value="<%= skripses.namaMhs %>" />
+		</p>
+		<p>
+			<label for="nim">Nim : </label><br />
+			<input type="text" class="form-control" name="nimMhs" value="<%= skripses.nimMhs %>" />
+		</p>
+		<p>
+			<label for="jurusan">Jurusan : </label><br />
+			<input value="<%= skripses.jurMhs %>" disabled /><br/>
+			<select name="jurMhs" class="form-control">
+				<option value="<%= skripses.jurMhs %>" selected>-- Pilih Jurusan --</option>
+				<option value="Teknik Informatika">Teknik Informatika</option>
+				<option value="Sistem Informasi">Sistem Informasi</option>
+				<option value="Manajemen Informatika">Manajemen Informatika</option>
+				<option value="Komputerisasi Akuntansi">Komputerisasi Akuntansi</option>
+				<option value="Teknik Komputer">Teknik Komputer</option>
+			</select>
+		</p>
+		<p>
+			<label for="jenjang">Jenjang : </label><br />
+			<input value="<%= skripses.jenjangMhs %>" disabled/><br/>
+			<select class="form-control" name="jenjangMhs">
+				<option value="<%= skripses.jenjangMhs %>">-- Pilih Jenjang --</option>
+				<option value="Strata 1">Strata 1</option>
+				<option value="Diploma 3">Diploma 3</option>
+			</select>
+		</p>
+		<p>
+			<label for="abstrak">Abstrak : </label><br />
+			<textarea class="form-control" name="abstrak" placeholder="" rows="5"><%= skripses.abstrak  %></textarea>
+		</p>
+		<p>
+			<label for="nim">keyword : </label><br />
+			<input type="text" class="form-control" name="keyword"  value="<%= skripses.keyword %>"/>
+		</p>
+
+		<p id="k"></p>
+		<p>
+			<input class="btn btn-raised btn-success" type="submit" value="OK">
+		</p>
+	</div>
+</form>
+
+<div id="hover">
+	<p align="center"><a href="/tampil" title="Lihat Data"><img width="50px" src="/images/1a.png"></a>
+		<a href="/data-editor/" target=_blank title="Data Editor"><img width="53px" src="/images/1b.png"></a>
+	</p>
+
+</div>
+
+<!-- Skrip javaScript ambil data "date" pada sistem  -->
+<script language="javascript">
+	document.lastModified;
+		var a = document.lastModified;
+			$('#k').append('<input type="hidden" name="modified" value="' + a + '"/>');
+</script>
+
+
+<div class="panel-footer">
+	copyright@STMIK AKAKOM Yogyakarta
+</div>
