@@ -1,0 +1,28 @@
+<% layout('layout') -%>
+
+<p>
+nanam
+<p>
+DataKU
+<p>
+	<table border="1px">
+		<tr>
+			<th>Judul Skripsi</th>
+			<th>Tahun Skripsi</th>
+			<th>Nama Mahasiswa</th>
+			<th>Nim Mahasiswa</th>
+			<th>Jurusan Mahasiswa</th>
+			<th>Jenjang Mahasiswa</th>
+		</tr>
+		<% skripses.forEach(function(dataku){ %>
+			<tr>
+				<td><%= dataku.jdlSkripsis %></td>
+				<td><%= dataku.thnSkripsis %></td>
+				<td><%= dataku.namaMhs %></td>
+				<td><%= dataku.nimMhs %></td>
+				<td><%= dataku.jurMhs %></td>
+				<td><%= dataku.jenjangMhs %></td>
+			<tr>
+		<% })%>
+	</table>
+<br>

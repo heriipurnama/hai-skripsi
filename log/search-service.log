@@ -1,0 +1,4 @@
+2016-08-25T11:33:01.183Z	ydhj7ei8xxb0/1472124781084/631/-	INFO	hello	Seneca/0.6.2/ydhj7ei8xxb0/1472124781084/631/-	
+Thu, 25 Aug 2016 11:33:02 GMT express-session deprecated undefined resave option; provide resave option at services/search-service.js:44:9
+Thu, 25 Aug 2016 11:33:02 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at services/search-service.js:44:9
+Koneksi Sukses

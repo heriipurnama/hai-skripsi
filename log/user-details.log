@@ -1,0 +1,3 @@
+2016-08-25T11:32:38.647Z	4dns9aa0kmv6/1472124758583/621/-	INFO	hello	Seneca/0.6.2/4dns9aa0kmv6/1472124758583/621/-	
+2016-08-25T11:32:56.274Z	4dns9aa0kmv6/1472124758583/621/-	INFO	listen	10201	
+2016-08-25T11:32:56.345Z	4dns9aa0kmv6/1472124758583/621/-	WARN	plugin	data-editor		ACT		init:data-editor	DEPRECATED	cmd:push,note:true,role:util	role:util patterns are replaced by role:basic.	

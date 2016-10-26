@@ -1,0 +1,92 @@
+<% layout('layout') -%>
+
+<div class="page-header1">
+	<h3 align="center"><b>SELAMAT DATANG</b><br/></h3>
+		<h4 align="center"><b>Aplikasi Pencarian Skripsi
+			<br/>STMIK AKAKOM Yogyakarta</b><br/></h4>
+				<p align="center">Jl. Raya Janti 143, Karang Jambe, Yogyakarta 55198</p>
+</div>
+
+<div class="page-header2">
+	<h2 align="center">
+		<font color="#001a33">
+			<b>STMIK AKAKOM YOGYAKARTA</b>
+		</font>
+	</h2>
+</div>
+<form id="data" role="form" method="post" action="/sederhana">
+  <div class="form-group"><br/>
+	  <p>
+		<label for="nama">Pencarian Sederhana </label><br/>
+	  </p>
+		<input name="q"  class="form-control" placeholder="Cari"/><br/>
+	  <p>
+		<input type="submit" class="btn btn-primary" value="OK">
+		<button class="btn btn-raised btn-warning" type="reset">Delete</Button>
+	</p>
+
+</form> 
+	<div id="flip">
+		<input type="" class="btn btn-primary" value="Pencarian Advance">
+	</div>
+		<div id="panel"><br/>
+			<form id="data" role="form" method="post" action="/advance">
+				<p>
+					<label for="nama">Judul Skripsi: </label><br/>
+				</p>
+					<input name="j"  class="form-control" placeholder="Cari"/><br/>
+				<p>
+					<input type="submit" class="btn btn-primary" value="OK">
+						<button class="btn btn-raised btn-warning" type="reset">Delete</Button>
+				</p>
+			</form>
+		</div><br/>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Detail Data</h3>
+	</div>
+		<div class="panel-body">
+			<p>
+				<label for="nama">Abstrak: </label><br />
+					<%= skripses.abstrak %>
+			</p>
+			<p>
+				<label for="nama">Keyword : </label><br />
+					<%= skripses.keyword %>
+			</p>
+			<p>
+				<label for="nama">Judul Skripsi : </label><br />
+					<%= skripses.jdlSkripsis %>
+			</p>
+			<p>
+				<label for="tahunDibuat">Tahun Dibuat : </label><br />
+					<%= skripses.thnSkripsis %>
+			</p>
+			<p>
+				<label for="nama">Nama Mahasiswa : </label><br />
+					<%= skripses.namaMhs %>
+			</p>
+			<p>
+				<label for="nim">Nim : </label><br />
+					<%= skripses.nimMhs %>
+			</p>
+			<p>
+				<label for="jurusan">Jurusan : </label><br />
+					<%= skripses.jurMhs %>
+			</p>
+			<p>
+				<label for="jenjang">Jenjang : </label><br />
+					<%= skripses.jenjangMhs %>
+			</p>
+			<p>
+				<label for="modifikasi">Terakhir dimodifikasi : </label><br />
+					<%= skripses.modified %>
+			</p>
+		</div>
+</div>
+
+</div>
+<div class="panel-footer">
+	copyright@STMIK AKAKOM Yogyakarta
+</div>

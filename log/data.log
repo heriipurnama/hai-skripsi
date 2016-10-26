@@ -1,0 +1,8 @@
+2016-04-28T01:52:32.582Z	yjfbgbwkivgw/1461808352531/10483/-	INFO	hello	Seneca/0.6.2/yjfbgbwkivgw/1461808352531/10483/-	
+Thu, 28 Apr 2016 01:52:32 GMT express-session deprecated undefined resave option; provide resave option at services/data.js:44:9
+Thu, 28 Apr 2016 01:52:32 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at services/data.js:44:9
+2016-04-28T01:52:32.959Z	yjfbgbwkivgw/1461808352531/10483/-	INFO	client	{port=10201,pin={role=user,cmd=*}}	
+2016-04-28T01:52:32.988Z	yjfbgbwkivgw/1461808352531/10483/-	INFO	client	{port=10202,pin={role=offer,cmd=*}}	
+2016-04-28T01:52:32.995Z	yjfbgbwkivgw/1461808352531/10483/-	INFO	client	{port=10203}	
+2016-04-28T01:52:32.998Z	yjfbgbwkivgw/1461808352531/10483/-	INFO	client	{port=102031212}	
+Koneksi Sukses

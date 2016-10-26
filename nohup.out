@@ -1,0 +1,58 @@
+2016-06-16T21:38:53.122Z	j5rem6lq6hmo/1466113133068/8777/-	INFO	hello	Seneca/0.6.2/j5rem6lq6hmo/1466113133068/8777/-	
+2016-06-16T21:38:53.128Z	1prk92vcugvl/1466113133068/8776/-	INFO	hello	Seneca/0.6.2/1prk92vcugvl/1466113133068/8776/-	
+2016-06-16T21:38:53.578Z	j5rem6lq6hmo/1466113133068/8777/-	INFO	listen	10202	
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 0.0.0.0:10202
+    at Object.exports._errnoException (util.js:874:11)
+    at exports._exceptionWithHostPort (util.js:897:20)
+    at Server._listen2 (net.js:1234:14)
+    at listen (net.js:1270:10)
+    at net.js:1379:9
+    at doNTCallback3 (node.js:450:9)
+    at process._tickDomainCallback (node.js:397:17)
+2016-06-16T21:38:53.851Z	1prk92vcugvl/1466113133068/8776/-	INFO	listen	10201	
+2016-06-16T21:38:53.980Z	1prk92vcugvl/1466113133068/8776/-	WARN	plugin	data-editor		ACT		init:data-editor	DEPRECATED	cmd:push,note:true,role:util	role:util patterns are replaced by role:basic.	
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 0.0.0.0:10201
+    at Object.exports._errnoException (util.js:874:11)
+    at exports._exceptionWithHostPort (util.js:897:20)
+    at Server._listen2 (net.js:1234:14)
+    at listen (net.js:1270:10)
+    at net.js:1379:9
+    at doNTCallback3 (node.js:450:9)
+    at process._tickDomainCallback (node.js:397:17)
+2016-06-16T21:38:54.184Z	kb2jw3y81a1m/1466113134139/8786/-	INFO	hello	Seneca/0.6.2/kb2jw3y81a1m/1466113134139/8786/-	
+2016-06-16T21:38:54.278Z	bft84ua83jst/1466113134234/8771/-	INFO	hello	Seneca/0.6.2/bft84ua83jst/1466113134234/8771/-	
+Thu, 16 Jun 2016 21:38:54 GMT express-session deprecated undefined resave option; provide resave option at services/search-service.js:44:9
+Thu, 16 Jun 2016 21:38:54 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at services/search-service.js:44:9
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::2001
+    at Object.exports._errnoException (util.js:874:11)
+    at exports._exceptionWithHostPort (util.js:897:20)
+    at Server._listen2 (net.js:1234:14)
+    at listen (net.js:1270:10)
+    at Server.listen (net.js:1366:5)
+    at Object.<anonymous> (/home/heriipurnama/Documents/node/hai-skripsi/services/search-service.js:152:8)
+    at Module._compile (module.js:435:26)
+    at Object.Module._extensions..js (module.js:442:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:311:12)
+    at Function.Module.runMain (module.js:467:10)
+    at startup (node.js:134:18)
+    at node.js:961:3
+Thu, 16 Jun 2016 21:38:54 GMT express-session deprecated undefined resave option; provide resave option at services/web-app.js:75:9
+Thu, 16 Jun 2016 21:38:54 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at services/web-app.js:75:9
+2016-06-16T21:38:54.850Z	bft84ua83jst/1466113134234/8771/-	INFO	client	{port=10201,pin={role=user,cmd=*}}	
+2016-06-16T21:38:54.865Z	bft84ua83jst/1466113134234/8771/-	INFO	client	{port=10202,pin={role=offer,cmd=*}}	
+2016-06-16T21:38:54.870Z	bft84ua83jst/1466113134234/8771/-	INFO	client	{port=10203}	
+Koneksi Sukses
+2016-06-16T21:38:55.180Z	bft84ua83jst/1466113134234/8771/-	WARN	plugin	data-editor		ACT		init:data-editor	DEPRECATED	cmd:push,note:true,role:util	role:util patterns are replaced by role:basic.	
