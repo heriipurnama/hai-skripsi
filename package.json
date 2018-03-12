@@ -10,9 +10,18 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "~1.11.0",
+    "cookie-parser": "^1.4.3",
+    "ejs-locals": "^1.0.2",
+    "excel": "^0.1.7",
     "express": "~4.11.2",
+    "express-session": "^1.15.6",
+    "formidable": "^1.2.0",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.9",
+    "optimist": "^0.6.1",
     "seneca": "~0.6.2",
     "seneca-auth": "~0.4.0",
-    "seneca-user": "~0.2.10"
+    "seneca-user": "~0.2.10",
+    "validator": "^9.4.1"
   }
 }
